@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/fondonegroq">
+
+    <!-- Logo de la app -->
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imageViewLogo"
+        android:layout_width="222dp"
+        android:layout_height="254dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/logo" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="303dp"
+        android:layout_margin="10dp">
+
+        <!-- Cuadro de fondo -->
+
+        <!-- Caja de texto para el nombre de usuario -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="352dp"
+            android:background="@drawable/frame_background" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/TextViewEmail"
+            android:layout_width="339dp"
+            android:layout_height="54dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/border"
+            android:ems="10"
+            android:hint="@string/email_hint"
+            android:inputType="textEmailAddress"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black" />
+
+        <!-- Caja de texto para la contraseña -->
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/TextViewPassword"
+            android:layout_width="339dp"
+            android:layout_height="54dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/border"
+            android:ems="10"
+            android:hint="@string/password_hint"
+            android:inputType="textPassword"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black" />
+
+        <!-- Botón para ingresar -->
+        <Button
+            android:id="@+id/BtnLogin"
+            android:layout_width="339dp"
+            android:layout_height="54dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="135dp"
+            android:backgroundTint="@color/black"
+            android:onClick="IrIniciar"
+            android:text="@string/btn_iniciar_pantalla"
+            android:textColor="@android:color/white" />
+
+        <!-- Botón para registrarse -->
+        <Button
+            android:id="@+id/buttonRegister"
+            android:layout_width="339dp"
+            android:layout_height="54dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="185dp"
+            android:backgroundTint="@color/black"
+            android:onClick="IrRegistrarse"
+            android:text="@string/btn_registrar_pantalla"
+            android:textColor="@android:color/white" />
+
+        <!-- Botón para google-->
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/BtnLoginGoogle"
+            android:layout_width="wrap_content"
+            android:layout_height="54dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="240dp"
+            android:layout_marginRight="20dp"
+            android:textColor="@android:color/black" />
+
+
+    </FrameLayout>
+
+</LinearLayout>
